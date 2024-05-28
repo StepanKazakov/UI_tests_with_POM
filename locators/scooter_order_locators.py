@@ -19,3 +19,4 @@ confirm_order_button = './/button[contains(@class, "Button_Button__ra12g Button_
 order_success_message = './/div[@class="Order_ModalHeader__3FDaJ"]'
 see_order_status_button = ('.//button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM")'
                            ' and text()="Посмотреть статус"]')
+

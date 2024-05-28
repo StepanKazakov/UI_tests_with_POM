@@ -18,3 +18,4 @@ class TestFAQ:
         with allure.step(f'Нажимаем на вопрос № {index} и проверяем изменение атрибута "aria-expanded"'):
             page = FAQPage(driver)
             assert page.toggle_faq_question(index) == True
+

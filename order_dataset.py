@@ -9,3 +9,4 @@ def order_data():
     color = random.choice(['black', 'grey'])
     comment = random.choice(['', 'срочно', 'важно', 'красиво'])
     return name, surname, address, phone, color, comment
+

@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from locators.base_locators import yandex_logo, scooter_logo_link, dzen_menu
 
 

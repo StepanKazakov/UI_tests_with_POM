@@ -31,6 +31,7 @@ class TestScooterOrder:
             link_scooter.return_to_main_from_logo()
             assert driver.current_url == "https://qa-scooter.praktikum-services.ru/"
 
+
     @allure.description('Заказ самоката на главной странице через кнопку под описанием с заполнением формы '
                         'рандомными данными из файла order_dataset, проверкой получения сообщения: "Заказ оформлен" '
                         'и переходом на страницу Дзена по клику на логотип в хедере')
