@@ -24,7 +24,6 @@ class TestScooterOrder:
         with allure.step('Проверяем сообщение об оформлении заказа'):
             assert "Заказ оформлен" in order.get_order_confirmation()
 
-
     @allure.title('Заказ самоката на главной странице через кнопку под описанием с заполнением формы '
                         'рандомными данными из файла order_dataset, проверкой получения сообщения: "Заказ оформлен"')
     @pytest.mark.parametrize("name, surname, address, phone, color, comment", [order_data()])

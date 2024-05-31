@@ -18,3 +18,4 @@ class TestFAQ:
             actual_answer = home.toggle_faq_question(index)
             expected_answer = expected_answers[index]
             assert actual_answer == expected_answer, f"Ожидали ответ: {expected_answer}, но получили: {actual_answer}"
+

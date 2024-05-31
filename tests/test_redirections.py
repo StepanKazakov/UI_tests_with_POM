@@ -19,3 +19,4 @@ class TestRedirections:
             page = HomePage(driver)
             dzen_url = page.go_to_yandex_from_logo()
             assert "dzen.ru" in dzen_url
+
