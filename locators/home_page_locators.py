@@ -1,0 +1,10 @@
+accept_cookies_button = './/button[@class="App_CookieButton__3cvqF"]'
+yandex_logo = './/a[@class="Header_LogoYandex__3TSOI"]'
+scooter_logo_link = './/a[@class="Header_LogoScooter__3lsAR"]'
+dzen_menu = './/div[@class="desktop-page-layout__afterHeader-2O"]'
+order_button_top = './/button[contains(@class, "Button_Button__ra12g") and text()="Заказать"]'
+order_button_big = ('(.//button[contains(text(), "Заказать") and (contains(@class, "Big") or '
+                    'contains(@class, "UltraBig") or contains(@class, "Middle"))])[last()]')
+faq_section_locator = './/div[@class="accordion"]'
+faq_question_locator_template = './/div[@id="accordion__heading-{}"]'
+faq_answer_locator_template = './/div[@id="accordion__panel-{}"]'
