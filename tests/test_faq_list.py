@@ -7,7 +7,7 @@ from answers_data import expected_answers
 @allure.feature('Проверка ответов на важные вопросы')
 class TestFAQ:
 
-    @allure.description('Скроллим главную страницу до конца вниз, нажимаем поочередно на каждый вопрос'
+    @allure.title('Скроллим главную страницу до конца вниз, нажимаем поочередно на каждый вопрос'
                         'и проверяем наличие нужного ответа')
     @pytest.mark.parametrize("index", list(range(8)))
     def test_faq_questions(self, driver, index):
