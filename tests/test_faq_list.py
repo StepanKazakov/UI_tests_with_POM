@@ -1,21 +1,20 @@
 import pytest
 import allure
-from page_objects.faq_list import FAQPage
-from page_objects.accept_cookie import CookieHandler
+from page_objects.home_page import HomePage
+from answers_data import expected_answers
 
 
-@allure.title('Проверка наличия ответов на важные вопросы')
+@allure.feature('Проверка ответов на важные вопросы')
 class TestFAQ:
 
-    @allure.description('Скроллим главную страницу до конца вниз, нажимаем на каждый вопрос, тесты проходят по циклу '
-                        'на каждый вопрос - отдельный тест, при наличии ответа атрибут вопроса '
-                        '"aria-expanded" меняется на "true"')
+    @allure.description('Скроллим главную страницу до конца вниз, нажимаем поочередно на каждый вопрос'
+                        'и проверяем наличие нужного ответа')
     @pytest.mark.parametrize("index", list(range(8)))
     def test_faq_questions(self, driver, index):
         with allure.step('Принимаем куки'):
-            cookie = CookieHandler(driver)
-            cookie.accept_cookies()
-        with allure.step(f'Нажимаем на вопрос № {index} и проверяем изменение атрибута "aria-expanded"'):
-            page = FAQPage(driver)
-            assert page.toggle_faq_question(index) == True
-
+            home = HomePage(driver)
+            home.accept_cookies()
+        with allure.step(f'Нажимаем на вопрос № {index} и проверяем текст ответа'):
+            actual_answer = home.toggle_faq_question(index)
+            expected_answer = expected_answers[index]
+            assert actual_answer == expected_answer, f"Ожидали ответ: {expected_answer}, но получили: {actual_answer}"

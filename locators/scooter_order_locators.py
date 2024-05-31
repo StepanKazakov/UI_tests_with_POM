@@ -1,6 +1,3 @@
-order_button_top = './/button[contains(@class, "Button_Button__ra12g") and text()="Заказать"]'
-order_button_big = ('(.//button[contains(text(), "Заказать") and (contains(@class, "Big") or '
-                    'contains(@class, "UltraBig") or contains(@class, "Middle"))])[last()]')
 input_name = './/input[@placeholder="* Имя"]'
 input_surname = './/input[@placeholder="* Фамилия"]'
 input_address = './/input[@placeholder="* Адрес: куда привезти заказ"]'
@@ -9,6 +6,7 @@ list_of_metro_stations = './/div[@class="select-search__select"]'
 input_phone = './/input[@placeholder="* Телефон: на него позвонит курьер"]'
 order_next_button = './/button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM") and text()="Далее"]'
 input_date = './/input[@placeholder="* Когда привезти самокат"]'
+day_locator_template = './/div[contains(@class, "react-datepicker__day") and text()="{:02d}"]'
 dropdown_period = './/div[@class="Dropdown-placeholder"]'
 list_of_periods = './/div[@class="Dropdown-menu"]'
 checkbox_black = './/input[@id="black"]'
@@ -19,4 +17,3 @@ confirm_order_button = './/button[contains(@class, "Button_Button__ra12g Button_
 order_success_message = './/div[@class="Order_ModalHeader__3FDaJ"]'
 see_order_status_button = ('.//button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM")'
                            ' and text()="Посмотреть статус"]')
-
