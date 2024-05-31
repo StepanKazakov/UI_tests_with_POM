@@ -8,7 +8,7 @@ from order_dataset import order_data
 @allure.feature('Заказ самоката')
 class TestScooterOrder:
 
-    @allure.description('Заказ самоката через кнопку в хедере с заполнением формы рандомными данными '
+    @allure.title('Заказ самоката через кнопку в хедере с заполнением формы рандомными данными '
                         'из файла order_dataset, проверкой получения сообщения: "Заказ оформлен"')
     @pytest.mark.parametrize("name, surname, address, phone, color, comment", [order_data()])
     def test_order_through_top_button_return_to_main_page(self, driver, name, surname, address, phone, color, comment):
@@ -24,8 +24,7 @@ class TestScooterOrder:
         with allure.step('Проверяем сообщение об оформлении заказа'):
             assert "Заказ оформлен" in order.get_order_confirmation()
 
-
-    @allure.description('Заказ самоката на главной странице через кнопку под описанием с заполнением формы '
+    @allure.title('Заказ самоката на главной странице через кнопку под описанием с заполнением формы '
                         'рандомными данными из файла order_dataset, проверкой получения сообщения: "Заказ оформлен"')
     @pytest.mark.parametrize("name, surname, address, phone, color, comment", [order_data()])
     def test_order_through_big_button_redirect_to_dzen(self, driver, name, surname, address, phone, color, comment):

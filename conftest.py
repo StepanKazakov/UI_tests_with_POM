@@ -1,8 +1,7 @@
 import pytest
 from selenium import webdriver
+from urls_data import base_url
 
-
-base_url = 'https://qa-scooter.praktikum-services.ru/'
 
 @pytest.fixture(scope='function')
 def driver():
@@ -10,3 +9,4 @@ def driver():
     driver.get(base_url)
     yield driver
     driver.quit()
+
